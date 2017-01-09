@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-' indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title>TAGS CODE, KBD, SAMP e VAR para representação de código fonte na página</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações sobre o documento HTML. E o atributo charset indica qual o tipo de codificação de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<p>Um pouco de código em Javascript com a tag code: </p>
+
+<code>
+var x = 5;<br>
+var y = 6;<br>
+document.getElementById("demonstracao").innerHTML = x + y;
+</code>
+
+<hr>
+
+<p>O elemento KBD representa uma entrada pelo teclado.</p>
+
+
+<kbd>File | Open...</kbd>
+
+<hr>
+
+<p>O elemento SAMP representa a saída apresentada por um programa de computador.</p>
+
+<samp>demo.example.com login: Apr 12 09:10:17
+Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189</samp>
+
+
+<hr>
+
+<p>Usando o elemento VAR para representar variáveis: </p>
+
+<p>Einstein escreveu:
+<var>E</var>=<var>m</var><var>c</var><sup>2</sup>.</p>
+
+</body>
+</html>
