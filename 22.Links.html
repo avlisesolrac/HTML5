@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-' indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title>Links na página</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações sobre o documento HTML. E o atributo charset indica qual o tipo de codificação de texto será utilizado no documento, além de resolver problema de acentuação -->
+
+	<style>
+		/*Propriedades do link, antes de ser clicado.*/
+		a:link {color: green; background-color: transparent; text-decoration: none;}
+
+		/*Propriedades do link, depois de ser clicado.*/
+		a:visited {color: gray; background-color: transparent; text-decoration: none;}
+
+		/*Propriedades do link, ao passar o mouse em cima.*/
+		a:hover {color: red; background-color: transparent; text-decoration: underline;}
+
+		/*Propriedades do link, ao ser clicado.*/
+		a:active {color: yellow; background-color: transparent; text-decoration: underline;}
+	</style>
+</head>
+<body>
+
+<p>Você pode alterar os valores que um link recebe por default.</p>
+
+<a href="https://github.com/avlisesolrac/HTML5" target="_blank">GitHub - avlisesolrac/html5</a>
+
+<br><br>
+
+<a href="http://www.w3schools.com/html/" target="_top"> Link com atributo de destino _top(carrega na mesma página)</a>
+
+<br>
+
+<a href="http://www.w3schools.com/html/" target="_blank">Link com atributo de destino _blank(carrega em outra aba)</a>
+
+
+<h3>Imagem como link:</h3>
+
+<p>A imagem é um link pode clicar nela.</p>
+
+<a href="http://www.w3schools.com/html/">
+	
+	<img src="./imagens/smiley.gif" alt="Tutorial HTML no site W3Schools.com" style="width: 42px; height: 42px; border: 0;">
+
+</a>
+
+<p>É colocado border:0, por causa das versões 9 e anteriores do IE, por que sem isso, o navegador da Microsoft coloca uma borda ao redor da imagem.</p>
+
+<h3>Links internos na página, com marcador id</h3>
+<hr>
+
+<p><a href="#capitulo6">Clique aqui para ir ao Capítulo 6</a></p>
+
+<h2>Capítulo 1</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 2</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 3</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 4</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2 id="capitulo6">Capítulo 6</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 7</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 8</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 9</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 10</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 11</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 12</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 13</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+<h2>Capítulo 14</h2>
+<p>Aqui vai o conteúdo deste capítulo com bla bla bla.</p>
+
+</body>
+</html>
