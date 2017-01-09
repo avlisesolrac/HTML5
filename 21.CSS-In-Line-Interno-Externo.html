@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-' indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title>CSS Em Linha, Interno e Externo</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações sobre o documento HTML. E o atributo charset indica qual o tipo de codificação de texto será utilizado no documento, além de resolver problema de acentuação -->
+
+	<link rel="stylesheet" type="text/css" href="./css/estilo-externo.css">
+
+	<style>
+		body {background-color: powderblue;}
+		h1 {color: blue;}
+		p {color: red;}
+		#p01 {color: orange;}
+		.sucesso {color: green;}
+	</style>
+</head>
+<body>
+
+<!-- CSS -> C ascading S tyle S heets (Folhas de Estilo em Cascata) -->
+
+<!-- <h1 style="color: blue;"> Este texto está em azul</h1> -->
+
+<h1>Título da página</h1>
+
+<p>Aqui vai um parágrafo.</p>
+
+<h3>Obtendo estilo de arquivo externo.</h3>
+<!--O estilo do h3 está vindo do arquivo estilo-externo.css importado na tag link dentro de head-->
+
+<h1>Fontes CSS:</h1>
+<hr>
+
+<h1 style="font-family: courier; font-size: 160%;">Um título de teste para fonte. </h1>
+<p style="font-family: verdana; font-size: 80%;">Um parágrafo de teste para fonte. </p>
+
+<h1>Bordas CSS:</h1>
+<hr>
+
+<p style="border: 1px dotted white;"> Um parágrafo com borda dotted. </p>
+
+<p style="border: 1px solid white;"> Um parágrafo com borda solid. </p>
+
+<p style="border: 1px dotted white;"> Um parágrafo com borda dotted. </p>
+
+<h1>Padding(espaçamento interno) CSS:</h1>
+<hr>
+
+<p style="border: 1px dotted white; padding: 30px;"> Um parágrafo com borda dotted. </p>
+
+<p style="border: 1px solid white; padding: 30px;"> Um parágrafo com borda solid. </p>
+
+<p style="border: 1px dotted white; padding: 30px;"> Um parágrafo com borda dotted. </p>
+
+
+<h1>Padding(espaçamento externo) CSS:</h1>
+<hr>
+
+<p style="border: 1px dotted white; margin: 50px;"> Um parágrafo com borda dotted. </p>
+
+<p style="border: 1px solid white; margin: 50px;"> Um parágrafo com borda solid. </p>
+
+<p style="border: 1px dotted white; margin: 50px;"> Um parágrafo com borda dotted. </p>
+
+<h1>Atributo id:</h1>
+<hr>
+
+<p id="p01">Um parágrafo diferente por que tem o atributo id.</p>
+
+
+<h1>Atributo class:</h1>
+<hr>
+
+<p class="sucesso">Este parágrafo tem atributo class, portanto será diferente dos demais. </p>
+
+
+<p>Este aqui é um parágrafo normal. </p>
+
+<p class="sucesso">Este parágrafo tem atributo class, portanto será diferente dos demais. </p>
+
+</body>
+</html>
