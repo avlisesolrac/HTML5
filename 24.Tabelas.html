@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title>TAG table para criar tabelas na página</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+
+	<!-- Estilo para adicionar borda na tabela, tirar -->
+	<style>
+		table, th, td {
+			border: 1px solid #000000;
+		}
+
+		.tabela-com-borda-recolhida {
+			border: 1px solid #000000;
+			border-collapse: collapse;
+			width: 50%;
+			text-align: center;
+		}
+		
+		table, th, td #espaco-interno {padding: 15px;}
+
+		table#tabela-colorida {width: 100%; background-color: #f1f1c1;}
+
+		table#tabela-diferente tr:nth-child(even) {background-color: #eeeeee;}
+
+		table#tabela-diferente tr:nth-child(odd) {background-color: #ffffff;}
+
+		table#tabela-diferente th {background-color: #000000; color: #ffffff; border-color: #ffffff;}
+
+		thead {color: green;}
+		#html5 tbody {color: blue;}
+		/*Sem o id a aplicação do estilo de tbody será aplicado a todas as tabelas.*/
+		tfoot {color: red;}
+	</style>
+</head>
+<body>
+
+<!-- Criação de tabela usando TABLE(tabela), TR(Table Row) são as linhas da tabela,
+TH(Table Head) são as celulas de titulo das colunas da tabela e por default o
+conteúdo fica em negrito e centralizado, TD(Table Data) são as celulas da tabela,
+onde são armazenados os dados da tabela -->
+
+<h4>Tabela com borda:</h4>
+<table style="width: 50%; text-align: center;">
+	<tr>
+		<th>Primeiro Nome:</th>
+		<th>Ultimo Nome:</th>
+		<th>Idade:</th>
+	</tr>
+
+	<tr>
+		<td>Jill</td>
+		<td>Smith</td>
+		<td>50</td>
+	</tr>
+
+	<tr>
+		<td>Eve</td>
+		<td>Jackson</td>
+		<td>94</td>
+	</tr>
+
+	<tr>
+		<td>John</td>
+		<td>Doe</td>
+		<td>80</td>
+	</tr>
+</table>
+
+<h4>Tabela com border-collapse:</h4>
+<table class="tabela-com-borda-recolhida">
+	<tr>
+		<th>Primeiro Nome:</th>
+		<th>Ultimo Nome:</th>
+		<th>Idade:</th>
+	</tr>
+
+	<tr>
+		<td>Jill</td>
+		<td>Smith</td>
+		<td>50</td>
+	</tr>
+
+	<tr>
+		<td>Eve</td>
+		<td>Jackson</td>
+		<td>94</td>
+	</tr>
+
+	<tr>
+		<td>John</td>
+		<td>Doe</td>
+		<td>80</td>
+	</tr>
+</table>
+
+<h4>Tabela com espaçamento interno nas celulas:</h4>
+<table class="tabela-com-borda-recolhida">
+	<tr>
+		<th style="padding: 15px;">Primeiro Nome:</th>
+		<th style="padding: 15px;">Ultimo Nome:</th>
+		<th style="padding: 15px;">Idade:</th>
+	</tr>
+
+	<tr>
+		<td style="padding: 15px;">Jill</td>
+		<td style="padding: 15px;">Smith</td>
+		<td style="padding: 15px;">50</td>
+	</tr>
+
+	<tr>
+		<td style="padding: 15px;">Eve</td>
+		<td style="padding: 15px;">Jackson</td>
+		<td style="padding: 15px;">94</td>
+	</tr>
+
+	<tr>
+		<td style="padding: 15px;">John</td>
+		<td style="padding: 15px;">Doe</td>
+		<td style="padding: 15px;">80</td>
+	</tr>
+</table>
+
+<h4>Tabela com títulos alinhados a esquerda(left):</h4>
+<table class="tabela-com-borda-recolhida">
+	<tr style="text-align: left;">
+		<th>Primeiro Nome:</th>
+		<th>Ultimo Nome:</th>
+		<th>Idade:</th>
+	</tr>
+
+	<tr>
+		<td>Jill</td>
+		<td>Smith</td>
+		<td>50</td>
+	</tr>
+
+	<tr>
+		<td>Eve</td>
+		<td>Jackson</td>
+		<td>94</td>
+	</tr>
+
+	<tr>
+		<td>John</td>
+		<td>Doe</td>
+		<td>80</td>
+	</tr>
+</table>
+
+<h4>Tabela com espaçamento na borda:</h4>
+<table style="border-spacing: 15px;" id="espaco-interno">
+	<tr>
+		<th>Primeiro Nome:</th>
+		<th>Ultimo Nome:</th>
+		<th>Idade:</th>
+	</tr>
+
+	<tr>
+		<td>Jill</td>
+		<td>Smith</td>
+		<td>50</td>
+	</tr>
+
+	<tr>
+		<td>Eve</td>
+		<td>Jackson</td>
+		<td>94</td>
+	</tr>
+
+	<tr>
+		<td>John</td>
+		<td>Doe</td>
+		<td>80</td>
+	</tr>
+</table>
+
+<h4>Tabela com célula que tem duas colunas</h4>
+<table class="tabela-com-borda-recolhida">
+	<tr>
+		<th>Nome:</th>
+		<th colspan="2">Telefone</th>
+	</tr>
+
+	<tr>
+		<td>Jill</td>
+		<td>55577854</td>
+		<td>55577855</td>
+	</tr>
+</table>
+
+<h4>Tabela com célula que tem três linhas</h4>
+<table class="tabela-com-borda-recolhida">
+	<tr>
+		<th>Nome:</th>
+		<td>Bill Gates</td>
+	</tr>
+
+	<tr>
+		<th rowspan="3">Telefone:</th>
+		<td>55577854</td>
+	</tr>
+
+	<tr>
+		<td>55577855</td>
+	</tr>
+
+	<tr>
+		<td>55577765</td>
+	</tr>
+	
+	<tr>
+		<th rowspan="3">Idade:</th>
+		<td>73</td>
+	</tr>
+</table>
+
+<h4>Tabela com legenda:</h4>
+<table class="tabela-com-borda-recolhida">
+	<caption> Lucro Mensal </caption>
+	<tr>
+		<th>Mês:</th>
+		<th>Lucro:</th>
+	</tr>
+
+	<tr>
+		<td>Janeiro</td>
+		<td>R$ 100,00</td>
+	</tr>
+
+	<tr>
+		<td>Fevereiro</td>
+		<td>$ 50,00</td>
+	</tr>
+</table>
+
+<h4>Tabela com cor de fundo diferente das outras tabelas:</h4>
+<table class="tabela-com-borda-recolhida" id="tabela-colorida">
+	<tr>
+		<th>Primeiro nome:</th>
+		<th>Ultimo nome:</th>
+		<th>Idade:</th>
+	</tr>
+
+	<tr>
+		<td>Jill</td>
+		<td>Smith</td>
+		<td>50</td>
+	</tr>
+
+	<tr>
+		<td>Eve</td>
+		<td>Jackson</td>
+		<td>94</td>
+	</tr>
+
+	<tr>
+		<td>John</td>
+		<td>Doe</td>
+		<td>80</td>
+	</tr>
+</table>
+
+<h4>Tabela com estilo diferente das outras tabelas:</h4>
+<table class="tabela-com-borda-recolhida" id="tabela-diferente">
+	<tr>
+		<th>Primeiro nome:</th>
+		<th>Ultimo nome:</th>
+		<th>Idade:</th>
+	</tr>
+
+	<tr>
+		<td>Jill</td>
+		<td>Smith</td>
+		<td>50</td>
+	</tr>
+
+	<tr>
+		<td>Eve</td>
+		<td>Jackson</td>
+		<td>94</td>
+	</tr>
+
+	<tr>
+		<td>John</td>
+		<td>Doe</td>
+		<td>80</td>
+	</tr>
+</table>
+
+<h4>Tabela com thead, tbody e tfoot (HTML5):</h4>
+
+<table class="tabela-com-borda-recolhida" id="html5">
+	<thead>
+		<tr>
+			<th>Mês</th>
+			<th>Lucro</th>
+		</tr>
+	</thead>
+
+	<tfoot>
+		<tr>
+			<td>Soma</td>
+			<td>R$ 180,00</td>
+		</tr>
+	</tfoot>
+
+	<tbody>
+		<tr>
+			<td>Janeiro</td>
+			<td>R$ 100,00</td>
+		</tr>
+
+		<tr>
+			<td>Fevereiro</td>
+			<td>R$ 80,00</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>
