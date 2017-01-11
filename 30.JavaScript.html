@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title>Usando Javascript na página para torná-la mais Interativa e Dinâmica</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<h1>Meu primeiro código JavaScript</h1>
+
+<button type="button" onclick="document.getElementById('exibir-data-hora').innerHTML = Date()">
+
+	Clique para exibir Data e Hora
+</button>
+
+<p id="exibir-data-hora"></p>
+
+<!--Com o seguinte script será inserido um texto dentro de uma tag HTML -->
+
+<p id="exibir-texto-do-script"></p>
+
+<h3>JavaScript pode alterar o conteúdo de um elemento HTML</h3>
+
+<button type="button" onclick="alterarParagrafo()">
+	Alterar conteúdo do parágrafo abaixo
+</button>
+
+<p id="alterar-texto-paragrafo">Aqui é uma demonstração de alteração ao clicar no link acima!</p>
+
+<button onclick="alterarEstilo()">Alterar Estilo</button>
+
+<p id="alterar-estilo-paragrafo">Com javascript é possível alterar o estilo de um elemento HTML.</p>
+
+<img id="img-lampada" src="./imagens/pic_bulboff.gif" width="100" height="180">
+<p>
+	<button onclick="interruptor(1)">Ligar</button>
+	<button onclick="interruptor(0)">Desilgar</button>
+</p>
+
+<h4>A tag NOSCRIPT é usado para fornecer um conteúdo alternativo para os usuários que tenham algum problema técnico com o javascript ou o navegador não suporta a linguagem.</h4>
+
+<script>
+	document.getElementById("exibir-texto-do-script").innerHTML = "Olá, esse texto veio de um comando Javascript.";
+
+	function alterarParagrafo() {
+		document.getElementById("alterar-texto-paragrafo").innerHTML = "Voilà! alterado o conteúdo do parágrafo com Javascript.";
+	}
+
+	function alterarEstilo() {
+		document.getElementById("alterar-estilo-paragrafo").style.fontSize = "25px";
+		document.getElementById("alterar-estilo-paragrafo").style.color = "red";
+	}
+
+	function interruptor(pressionado) {
+		var novaImagem;
+
+		if (pressionado == 0)
+			novaImagem = "./imagens/pic_bulboff.gif";
+		else
+			novaImagem = "./imagens/pic_bulbon.gif"
+
+		document.getElementById("img-lampada").src = novaImagem;
+	}
+	/*A tag <noscript> não foi inserida nesse documento HTML, porque a tag não foi aceita, acredito que tenha sido descontinuada.*/
+</script>
+
+</body>
+</html>
