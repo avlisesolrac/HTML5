@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title>TAG IFRAME para inserir uma página dentro de outra página</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<h3>Iframe por default tem uma borda:</h3>
+
+<iframe src="./4.Link.html" width="300" height="200"></iframe>
+
+<h3>Neste iframe foi tirado a borda com a propriedade CSS "border:none":</h3>
+
+<iframe style="border: none;" src="./4.Link.html" width="300" height="200"></iframe>
+
+<h3>Com CSS você pode alterar a cor da borda, espessura e tipo de borda:</h3>
+
+<iframe style="border: 2px dotted grey;" src="./4.Link.html"></iframe>
+
+<h3>Você pode colocar um link para que seja aberto dentro de um iframe</h3>
+
+<iframe src="./4.Link.html" width="100%" height="300px" name="iframe-do-link"></iframe>
+
+<p><a href="http://www.w3schools.com" target="iframe-do-link">Abrir W3Schools no Iframe acima</a></p>
+
+<!--Como o iframe tem um valor atribuido ao name, e o atributo target no link tem o mesmo nome do iframe, então ao clicar no link o endereço web será aberto dentro daquele iframe.-->
+
+</body>
+</html>
