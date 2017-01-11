@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> Layout simples usando a propriedade float</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+	<meta http-equiv="refresh" content="1">
+	<style>
+		/*.borda {border: 1px solid black;}*/
+		.container {width: 100%; border: 1px solid gray;}
+		header, footer {padding: 1em; color: #ffffff;background-color: #000000; clear: left; text-align: center;}
+		/*clear é usado para especificar elementos que podem ou não flutuar ao lado do elemento que tem o clear, valores possíveis: none|left|right|both|initial|inherit;*/
+
+		nav {
+			float: left;
+			max-width: 160px;
+			margin: 0;
+			padding: 1em;
+		}
+
+		nav ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		nav ul a {
+			text-decoration: none;
+		}
+
+		article {
+			margin-left: 170px;
+			border-left: 1px solid gray;
+			padding: 1em;
+			overflow: hidden;
+			/*Esconde ou exibe a barra de rolagem, valores possíveis: visible|hidden|scroll|auto|initial|inherit;*/
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	
+<header class="borda">
+	<h1 class="borda">Galeria de Cidades</h1>
+</header>
+
+<nav class="borda">
+	<ul class="borda">
+		<li><a href="#">Londres</a></li>
+		<li><a href="#">Paris</a></li>
+		<li><a href="#">Tóquio</a></li>
+	</ul>
+</nav>
+
+<article class="borda">
+	<h1>Londres</h1>
+	
+	<p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+
+	<p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+</article>
+
+<footer class="borda">
+	Copyright &copy; W3Schools.com
+</footer>
+
+</div>
+
+</body>
+</html>
