@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> TAGS SELECT, TEXTAREA, BUTTON, LABEL, DATALIST, KEYGEN e OUTPUT para inserir formulários na página</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<!--&#60 e 62 serve para exibir os simbolos '<' e '>'-->
+<h3>Elemento &#60;select&#62;:</h3>
+
+<form action="action-page.php" method="POST">
+
+	<select name="carros">
+		<option value="volvo"> Volvo </option>
+		<option value="saab"> Saab </option>
+		<option value="fiat"> Fiat </option>
+		<option value="audi"> Audi </option>
+	</select>
+
+	<br><br>
+
+	<input type="submit" value="COMPRAR">
+</form>
+
+<h3>Usando o atributo selected:</h3>
+
+<form action="action-page.php" method="POST">
+	
+	<select name="carros">
+		<option value="volvo"> Volvo </option>
+		<option value="saab"> Saab </option>
+		<option value="fiat" selected> Fiat </option>
+		<option value="audi"> Audi </option>
+	</select>
+</form>
+
+<!--&#60 e 62 serve para exibir os simbolos '<' e '>'-->
+<h3>Elemento &#60;textarea&#62;:</h3>
+
+<form action="action-page.php" method="POST">
+	<textarea name="mensagem" rows="10" cols="30">Aqui o texto que será exibido por padrão no elemento textarea.</textarea>
+
+	<br>
+
+	<input type="submit" value="ENVIAR">
+</form>
+
+<!--&#60 e 62 serve para exibir os simbolos '<' e '>'-->
+<h3>Elemento &#60;button&#62;:</h3>
+
+<button type="button" onclick="alert('Mensagem apresentada ao clicar no botão!')"> Clique aqui </button>
+
+<!--&#60 e 62 serve para exibir os simbolos '<' e '>'-->
+<h3>Elemento &#60;label&#62;:</h3>
+
+<form action="action-page.php" method="POST">
+	<label for="masculino"> Masculino </label>
+	<input type="radio" name="genero" id="masculino" value="Masculino"><br>
+
+	<label for="feminino"> Feminino </label>
+	<input type="radio" name="genero" id="feminino" value="feminino"><br>
+
+	<label for="outros"> Outros </label>
+	<input type="radio" name="genero" id="outros" value="outros"><br><br>
+
+	<input type="submit" value="CADASTRAR">
+	
+</form>
+
+<h1>Elementos de Formulário HTML5</h1>
+
+<!--&#60 e 62 serve para exibir os simbolos '<' e '>'-->
+<h3>Elemento &#60;datalist&#62;:</h3>
+
+<form action="action-page" method="POST">
+	<input list="navegadores" name="navegador">
+	<!--O id e list devem ser iguais, senão, não vai funcionar -->
+		<datalist id="navegadores">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+	<input type="submit" value="ENVIAR">
+</form>
+
+<!--&#60 e 62 serve para exibir os simbolos '<' e '>'-->
+<h3>Elemento &#60;keygen&#62;:</h3>
+
+<form action="action-page.php" method="POST">
+	Nome de usuário: <input type="text" name="usuario">
+	<br><br>
+	Criptografia: <keygen name="security"></keygen>
+	<br><br>
+	<input type="submit" value="ENVIAR">
+</form>
+
+<!--&#60 e 62 serve para exibir os simbolos '<' e '>'-->
+<h3>Elemento &#60;keygen&#62;:</h3>
+
+<form action="action-page.php" oninput="soma.value=parseInt(num1.value) + parseInt(num2.value)">
+	
+	<input type="range" id="num1" name="numero1" value="50"> 100 +
+	
+	<input type="number" id="num2" name="numero2" value="50"> = <output name="soma" for="num1 num2"></output>
+
+	<br><br>
+
+	<input type="submit" value="SOMAR">
+	
+</form>
+
+</body>
+</html>
