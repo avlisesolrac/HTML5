@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> TAGS INPUT e as possibilidades do atributo type</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<h3>Atributo type text:</h3>
+
+<form action="action-page.php" method="POST">
+	Primeiro nome: <br>
+	<input type="text" name="primeiro-nome"> <br>
+
+	Ultimo nome: <br>
+	<input type="text" name="ultimo-nome"> <br>
+	<br><br>
+
+	<input type="submit" value="ENVIAR">
+	
+</form>
+
+<h3>Atributo type password:</h3>
+
+<form action="action-page.php" method="POST">
+	Nome de usuário: <br>
+	<input type="text" name="usuario"> <br>
+
+	Senha de acesso: <br>
+	<input type="password" name="senha">
+	<br><br>
+
+	<input type="submit" value="CADASTRAR">
+</form>
+
+<h3>Atributo type reset:</h3>
+
+<form action="action-page.php" method="POST">
+	Primeiro nome: <br>
+	<input type="text" name="primeiro-nome" value="Mickey"> <br>
+
+	Segundo nome: <br>
+	<input type="text" name="segundo-nome" value="Mouse"> <br><br>
+
+	<input type="reset" value="REDEFINIR">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type button:</h3>
+
+<form action="action-page.php" method="POST">
+<!--O que está no value é o que será gravado no banco -->
+	<input type="radio" name="genero" value="masculino" checked> Masculino <br>
+
+	<input type="radio" name="genero" value="feminino"> Feminino <br>
+
+	<input type="radio" name="genero" value="outros"> Outros <br><br>
+
+	<input type="submit" value="ENVIAR">
+</form>
+
+
+<h3>Atributo type checkbox:</h3>
+
+<form action="action-page.php" method="POST">
+<!--O que está no value é o que será gravado no banco -->
+	<input type="checkbox" name="veiculo1" value="bike"> Eu tenho uma bicicleta <br>
+
+	<input type="checkbox" name="veiculo2" value="car"> Eu tenho um carro
+	<br><br>
+
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type button:</h3>
+
+<input type="button" onclick="alert('Aqui vai aparecer a mensagem quando o usuário clicar no botão!')" value="Clique aqui">
+
+
+<h1>Tipos de INPUT no HTML5: </h1>
+
+<h3>Atributo type number, min e max: </h3>
+
+<form action="action-page.php">
+	Quantidade(Entre 1 e 5):
+	<input type="number" name="quantidade" min="1" max="5">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type number, min, max e step: </h3>
+
+<form action="action-page.php">
+	Quantidade:
+	<input type="number" name="quantidade" min="0" max="100" step="10" value="30">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type date: </h3>
+
+<form action="action-page.php">
+	Data de aniversário:
+	<input type="date" name="aniversario">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type date, max e min: </h3>
+
+<form action="action-page.php">
+	Entre com uma data antes de 01/01/1980:
+	<input type="date" name="aniversario" max="1979-12-31"> <br><br>
+
+	Entre com uma data a partir de 01/01/2000:
+	<input type="date" name="aniversario2" min="2000-01-02"> <br><br>
+
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type color: </h3>
+
+<form action="action-page" method="POST">
+	Escolha a sua cor preferida:
+	<input type="color" name="cor-favorita" value="#0000FF">
+
+	<input type="submit" value="ENVIAR">	
+</form>
+
+<h3>Atributo type range, min e max: </h3>
+
+<form action="action-page.php" method="POST">
+	Pontos: <input type="range" name="pontos" min="0" max="10">
+	<input type="submit" value="ENVIAR">	
+</form>
+
+<h3>Atributo type month:</h3>
+
+<form action="action-page.php" method="POST">
+	Aniversario (Mês e Ano): <input type="month" name="mes-aniversario">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type week:</h3>
+
+<form action="action-page.php" method="POST">
+	Selecione uma semana do ano: <input type="week" name="semana-ano"> <input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type time:</h3>
+
+<form action="action-page.php" method="POST">
+	Selecione um horario:
+	<input type="time" name="horario-selecionado">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type datetime-local: </h3>
+
+<form action="action-page" method="POST">
+	Data e hora do nascimento:
+	<input type="datetime-local" name="data-hora-nasc">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type email: </h3>
+
+<form action="action-page.php" method="POST">
+	E-mail: <input type="email" name="email">
+	<input type="submit" value="ENVIAR">
+</form>
+
+<h3>Atributo type search: </h3>
+
+<form action="action-page.php" method="POST">
+	BUSCAR NO SITE:<input type="search" name="pesquisa"> <br>
+	<input type="submit" name="PESQUISAR">
+</form>
+
+<h3>Atributo tel só funciona no Safari 8: </h3>
+
+<form action="action-page.php" method="POST">
+	Telefone:
+	<input type="tel" name="telefone">
+	<input type="submit" value="ALTERAR">
+</form>
+
+<h3>Atributo url: </h3>
+
+<form action="action-page.php" method="POST">
+	Insira sua URL: <input type="url" name="site">
+	<input type="submit" value="CADASTRAR">
+</form>
+
+</body>
+</html>
