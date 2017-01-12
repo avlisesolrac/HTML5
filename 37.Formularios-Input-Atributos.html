@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> Atributos na tag INPUT e FORM</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+	
+</head>
+<body>
+
+<h1>Atributos de entrada: </h1>
+
+<h3>O atributo value:</h3>
+
+<form action="action-page.php" method="POST">
+	Primeiro nome: <br>
+	<input type="text" name="primeiro-nome" value="Carlos"> <br>
+
+	Ultimo nome: <br>
+	<input type="text" name="ultimo-nome"> <br>
+
+<h3>O atributo readonly:</h3>
+
+	Segundo nome: <br>
+	<input type="text" name="primeiro-nome1" value="Eduardo" readonly>
+
+<h3>O atributo disabled:</h3>
+	
+	Terceiro nome: <br>
+	<input type="text" name="terceiro-nome" value="Silva" disabled>
+
+<h3>O atributo size:</h3>
+
+	Primeiro nome: <br>
+	<input type="text" name="primeiro-nome" value="John" size="40">
+
+<h3>O atributo maxlength:</h3>
+	
+	Primeiro nome: <br>
+	<!--Permitido o máximo de 10 caracteres -->
+	<input type="text" name="name" maxlength="10">
+
+<h3>O atributo autofocus:</h3>
+
+	Primeiro nome: <input type="text" name="name" autofocus>
+
+<h3>O atributo width e height:</h3>
+	Nome: <input type="text" name="nome">
+	
+	<input type="image" src="./imagens/img_submit.gif" alt="Enviar" width="20" height="20">
+
+<h3>O atributo list:</h3>
+
+	<input list="navegadores" name="navegador">
+		<datalist id="navegadores">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+
+<h3>O atributo min e max:</h3>
+	
+	Entre com uma data antes de 01-01-1980: <br>
+	<input type="date" name="aniversario" max="1979-12-31"> <br>
+
+	Entre com uma data a partir de 01-01-2017: <br>
+	<input type="date" name="proximo" min="2017-01-02"> <br><br>
+
+	Quantidade entre (1-5): <br>
+	<input type="number" name="qtd" min="1" max="5">
+
+<h3>O atributo multiple:</h3>
+	
+	Selecione os arquivos:<br>
+	<input type="file" name="img" multiple>
+
+
+<h3>O atributo pattern(padrão[expressão regular]):</h3>
+
+	Digite Código do País: <input type="text" name="sigla-pais" pattern="[A-Z a-z]{3}" title="Três letras do País">	<br><br>
+
+	Telefone sem DDD: <input type="text" name="telefone" pattern="[0-9]{8}" title="Número de telefone com 8 dígitos">
+
+<h3>O atributo placeholder:</h3>
+
+	<input type="text" name="name" placeholder="Primeiro nome"> <br> <br>
+	<input type="password" name="senha" placeholder="Senha">
+
+<h3>O atributo required:</h3>
+
+	Username: 
+	<input type="text" name="nickname" required>
+
+<h3>O atributo step:</h3>
+
+	<input type="number" step="3" name="multiplos-3">
+
+	<br><br><br>
+	<input type="submit" value="ENVIAR">
+	
+</form>
+
+<h3>Formulário com atributo autocomplete:</h3>
+
+<form action="action-page.php" method="POST" autocomplete="on">
+	Primeiro nome: <input type="text" name="pnome"><br>
+	Ultimo nome: <input type="text" name="ultnome"><br>
+	E-mail: <input type="email" name="email" autocomplete="off"> <br><br>
+
+	<input type="submit" name="">
+</form>
+
+<h3>Formulario com atributo novalidate:</h3>
+
+<form action="action-page.php" method="POST" novalidate>
+	E-mail: <input type="email" name="email" autocomplete="off"> <br><br>
+
+	<input type="submit" name="">
+</form>
+
+<h3>Formulario com atributo id:</h3>
+
+<form action="action-page.php" method="POST" id="formNomeCompleto">
+	Primeiro nome: <input type="text" name="primeiro-nomenome"> <br>
+
+	<input type="submit" name=""> <br><br>
+</form>
+	Esse campo pertence ao formulario de cima. <br>
+	<input type="email" name="ultimo-nome" form="formNomeCompleto">
+
+<h3>Formulario com atributo formaction:</h3>
+
+<form action="action-page.php" method="POST">
+	E-mail: <input type="email" name="email"><br><br>
+
+	<input type="submit" name="">
+	<input type="submit" formaction="action-admin.php" value="Enviar Admin">
+</form>
+
+<h3>Formulario com atributo formenctype:</h3>
+
+<form action="action-page.php" method="POST">
+	Nome: <input type="text" name="name"><br>
+	<input type="submit" value="ENVIAR">
+	<input type="submit" formenctype="multipart/form-data" value="Enviar Multipart/form-data">
+</form>
+
+<h3>Formulario com atributo formmethod:</h3>
+
+<form action="action-page.php" method="GET">
+	Nome: <input type="text" name="name"><br>
+	Nome2: <input type="text" name="name2"><br><br>
+	<input type="submit" value="ENVIAR USANDO GET">
+	<input type="submit" formaction="action-admin.php" formmethod="POST" value="ENVIAR USANDO POST">
+</form>
+
+<h3>Formulario com atributo formnovalidate:</h3>
+
+<form action="action-page.php" method="POST">
+	E-mail: <input type="email" name="email"><br><br>
+
+	<input type="submit" value="ENVIAR">
+	<input type="submit" formaction="uso-admin.php" formnovalidate value="ENVIAR SEM VALIDAR">
+</form>
+
+
+<h3>Formulario com atributo formtarget:</h3>
+
+<form action="action-page.php" method="POST">
+	Nome: <input type="text" name="nome"><br>
+	Sobrenome: <input type="text" name="nome2"><br><br>
+
+	<input type="submit" value="ENVIAR NORMAL">
+	<input type="submit" formtarget="_blank" value="ENVIAR EM NOVA ABA">
+</form>
+
+</body>
+</html>
