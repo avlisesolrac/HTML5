@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> Criação de tags com JavScript para navegadores antigos</title>
+	<!--[if lt IE 9]>
+		<script src="./js/html5shiv.js"></script> 
+	<![endif]-->
+
+	<!--IF acima necessário para usar elemtos do HTML5 em versões antigas do Internet Explorer -->
+
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+
+	<!--Script necessário para versões anteriores do IE 10 
+	<script>
+		document.createElement("minhaTag");
+	</script>
+	-->
+	<style>
+		minhaTag {
+			display: block;
+			background-color: #dddddd;
+			padding: 50px;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+
+<h1> Um título </h1>
+
+<minhaTag> Meu primeiro elemento </minhaTag>
+
+</body>
+</html>
