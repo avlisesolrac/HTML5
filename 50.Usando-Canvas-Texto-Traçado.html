@@ -14,24 +14,24 @@ atributo para determinar quais documentos que devem ser levados ao usuário que 
 
 <!--Por default canvas tem uma (largura) width="300" e (altura) height="150" -->
 
-<canvas id="texto" width="210" height="100" style="border: 1px solid #000000;">
-	Seu navegador não suporta o elemento canvas do html5.
+<canvas id="textoTracado" width="200" height="40" style="border: 1px solid #000000;">
+Seu navegador não suporta elemento canvas do html5
 </canvas>
 
 <script>
-/*CANVAS - texto*/
+/*CANVAS - textoTracado*/
 
 	//Armazena o elemento html pelo id na variável tela
-	var tela = document.getElementById("texto");
+	var tela = document.getElementById("textoTracado");
 
 	//Não sei para que serve, mas tem que colocar, mas acho que coloca o lápis na tela de desenho(canvas)
 	var lapis = tela.getContext("2d");
 
-	//Determina a fonte que será utilizada pelo lapis
-	lapis.font = "30px Comic Sans MS";
-
-	//Escreve o texto que está dentro de filltext, com a respectiva posição do x e y.
-	lapis.fillText("Texto na tela", 10, 60);
+	//Determina o tamanho e a fonte que será utilizada pelo lapis
+	lapis.font = "30px Arial";
+	
+	//Escreve o texto traçado que está dentro de strokeText(), com a respectiva posição do x e y.
+	lapis.strokeText("Olá Mundo!", 20, 30);
 </script>
 
 </body>
