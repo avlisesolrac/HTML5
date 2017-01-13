@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> TAGS SVG e RECT - Para desenhar um Retângulo com Bordas Arredondadas</title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<!-- svg determina o contâiner do desenho-->
+<svg width="400" height="180">
+	<!--rect determina que será desenhado um retângulo com borda arredondada de 20px no rx e também no ry e largura de 150px e altura de 150px. No style é determinado o fill(cor de preenchimento do retângulo), stroke-width para determinar a espessura da borda e stroke para determinar a cor da borda -->
+	<rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+	style="fill:rgba(255,0,0,0.5); stroke:#000000; stroke-width:5;" />
+</svg>
+
+</body>
+</html>
