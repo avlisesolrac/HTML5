@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> TAG CANVAS - Desenhar uma linha no canvas </title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<!--Por default canvas tem uma (largura) width="300" e (altura) height="150" -->
+
+<canvas id="minhaTela" width="300" height="300" style="border: 1px solid #000000;">
+Seu navegador não suporta a tag canvas do HTML5.
+</canvas>
+
+<canvas id="quadroLinhaReta" style="border: 1px solid #000000;">
+Seu navegador não suporta o elemento canvas.
+</canvas>
+
+<canvas id="inversoMinhaTela" width="300" height="300" style="border: 1px solid #000000;">
+Seu navegador não suporta o elemento canvas do html5.
+</canvas>
+
+<script>
+/*Primeiro CANVAS - minhaTela*/
+
+	//Armazena o elemento html pelo id na variável quadro
+	var quadro = document.getElementById("minhaTela");
+
+	//Não sei para que serve, mas tem que colocar.
+	var lapis = quadro.getContext("2d");
+
+	//posiciona o lapis na posição x1=0 e y1=0, sendo x para largura e y para altura
+	lapis.moveTo(0,0);
+
+	//Desenha uma linha até a posição x2=300 e y2=300
+	lapis.lineTo(300, 300);
+
+	//Não sei para que serve, mas tem que colocar.
+	lapis.stroke();
+
+/*Segundo CANVAS - quadroLinhaReta*/
+	
+	//Armazena o elemento html pelo id na variável quadro
+	var quadro = document.getElementById("quadroLinhaReta");
+
+	//Não sei para que serve, mas tem que colocar.
+	var lapis = quadro.getContext("2d");
+
+	//posiciona o lapis na posição x1=0 e y1=80, sendo x para largura e y para altura
+	lapis.moveTo(0, 80);
+
+	//Desenha uma linha até a posição x2=300 e y2=80
+	lapis.lineTo(300,80);
+
+	//Não sei para que serve, mas tem que colocar.
+	lapis.stroke();
+
+/*Segundo CANVAS - inversoMinhaTela*/
+	
+	//Armazena o elemento html pelo id na variável quadro
+	var quadro = document.getElementById("inversoMinhaTela");
+
+	//Não sei para que serve, mas tem que colocar.
+	var lapis = quadro.getContext("2d");
+
+	//posiciona o lapis na posição x1=300 e y1=0, sendo x para largura e y para altura
+	lapis.moveTo(300, 0);
+
+	//Desenha uma linha até a posição x2=0 e y2=300
+	lapis.lineTo(0, 300);
+
+	//Não sei para que serve, mas tem que colocar.
+	lapis.stroke();
+</script>
+
+</body>
+</html>
