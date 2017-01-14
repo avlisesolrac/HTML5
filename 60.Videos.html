@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> TAGS VIDEO e SOURCE - Para inserir vídeo na página </title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<h4>Vídeo com controle:</h4>
+<video width="320" height="240" controls>
+	<source src="./video/mov_bbb.mp4"/>
+	<!--Se o navegador não suportar .mp4 vai executar o video debaixo .ogg-->
+	<source src="./video/movie.ogg"/>
+	<!--Caso contrário não suporta HTML5 -->
+	Seu navegador não suporta a tag video do HTML5.
+</video>
+
+<h4>Sem controle e começar vídeo automaticamente:</h4>
+<video width="320" height="240" autoplay>
+	<source src="./video/movie.ogg">
+	<source src="./video/mov_bbb.mp4">
+	Seu navegador não suporta a tag video do HTML5.
+</video>
+
+<h4>Com controle próprio, feito em JavaScript:</h4>
+<div style="text-align: center;float:left;">
+	<button onclick="iniciarParar()">Iniciar/Parar</button>
+	<button onclick="aumentarTela()">Grande</button>
+	<button onclick="diminuirTela()">Pequeno</button>
+	<button onclick="padrao()">Padrão</button><br><br>
+	<video id="video3">
+		<source src="./video/mov_bbb.mp4"/>
+		<source src="./video/movie.ogg"/>
+		Seu browser não suporta a tag de vídeo do HTML5.
+	</video>
+</div>
+
+<script>
+	var video = document.getElementById("video3");
+
+	function iniciarParar() {
+		//Se o vídeo estiver parado então vai Iniciar, se não vai parar o video.
+		if(video.paused) video.play(); else video.pause();
+	}
+
+	function aumentarTela() {
+		video.width = 880;
+	}
+
+	function diminuirTela() {
+		video.width = 320;
+	}
+
+	function padrao() {
+		video.width = 420;
+	}
+
+</script>
+</body>
+</html>

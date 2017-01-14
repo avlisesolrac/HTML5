@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- O atributo lang determina a lingua/idioma utilizada no documento e depois do '-'
+indica o dialeto usado naquele idioma, mecanismos de buscas fazem a leitura desse
+atributo para determinar quais documentos que devem ser levados ao usuário que fez a busca-->
+<head>
+	<title> TAGS SVG e ELLIPSE - Para inserir uma mapa do google com latitude e longitude iniciais </title>
+	<meta charset="UTF-8">
+	<!-- A tag meta é um meta dados, ou seja, serve para indicar dados/informações
+	sobre o documento HTML. E o atributo charset indica qual o tipo de codificação
+	de texto será utilizado no documento, além de resolver problema de acentuação -->
+</head>
+<body>
+
+<h1>Meu primeiro Google Map</h1>
+
+<!--Div onde será inserido o mapa, com largura e altura-->
+<!--
+<div id="map" style="width:400px; height:400px;">
+</div>
+
+Função para definição do mapa a ser apresentado para o usuário 
+<script>
+	function myMap() {
+		//setMapa - Define as propriedades do mapa
+		var mapOptions = {
+			//center - Especifíca onde centralizar o mapa, usando latitude e longitude
+			center: new google.maps.LatLng(51.5, -0.12),
+			//zoom - Especifíca o nível de zoom para ver o mapa inicialmente
+			zoom: 10,
+			//mapTypeId - Especifíca o tipo de mapa para mostrar. Ex.: ROADMAP, SATELLITE, HYBRID e TERRAIN
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		}
+
+		//Cria um mapa dentro do elemento div com id="mapa"
+		var map = new google.maps.Map(document.getElementById("map"), configurarMapa);
+	}
+
+</script>
+-->
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(-23.4942672, -46.4116824),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+</body>
+</html>
