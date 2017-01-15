@@ -13,6 +13,13 @@ atributo para determinar quais documentos que devem ser levados ao usuário que 
 <body>
 
 <div id="resultado"></div>
+<h4>Conta os cliques no botão e armazena localmente permanentemente ou até limpar os dados de navegação:</h4>
+<button onclick="contarCliquesParaSempre()">Clicar</button>
+<div id="resultado2"></div>
+
+<h4>Conta os cliques no botão e armazena localmente por sessão, caso feche a aba ou o navegador os dados serão excluidos:</h4>
+<button onclick="contarCliquesPorSessao()">Clicar</button>
+<div id="resultado3"></div>
 
 <script>
     //Checagem se o navegador suporta o armazenamento local
@@ -22,9 +29,63 @@ atributo para determinar quais documentos que devem ser levados ao usuário que 
 
         //recupera/retorna o valor armazenado
         document.getElementById("resultado").innerHTML = localStorage.getItem("ultimoNome");
+
+        /*Poderia fazer assim:
+            //Armazena Smith em lastName
+            localStorage.lastName = "Smith";
+
+            //Recupera
+            document.getElementById("resultado").innerHTML = localStorage.lastName;
+        */
+
+        //Para remover: localStorage.removeItem("lasName");
     } else {
         document.getElementById("resutado").innerHTML = "Sinto muito, mas seu navegador não suporta Web Storage...";
     }
+
+//localStorage armazena para hoje, semana que vem, ano que vem, ou até limpar os dados de navegação
+    function contarCliquesParaSempre() {
+        if(typeof(Storage) !== "undefined") {
+            //Navegador suporta armazenamento local
+            if(localStorage.contador) {
+                //Necessário converter para number, senão adicionará como string
+                localStorage.contador = Number(localStorage.contador)+1;
+            } else {
+                localStorage.contador = 1;
+            }
+
+            if(localStorage.contador == 1) {
+                document.getElementById("resultado2").innerHTML = "Você clicou " + localStorage.contador + " vez.";  
+            } else {
+                document.getElementById("resultado2").innerHTML = "Você clicou " + localStorage.contador + " vezes.";
+            }
+            
+
+        } else {
+            document.getElementById("resultado2").innerHTML = "Seu navegador não suporta WEB Storage";
+        }
+    }
+
+//sessionStorage armazena para a sessão do usuário, caso ele feche a aba ou o navegador os dados são excluidos.
+    function contarCliquesPorSessao() {
+        if(typeof(Storage) !== "undefined") {
+            if(sessionStorage.contador3) {
+                sessionStorage.contador3 = Number(sessionStorage.contador3) + 1;
+            } else {
+                sessionStorage.contador3 = 1;
+            }
+
+            if(sessionStorage.contador3 == 1) {
+                document.getElementById("resultado3").innerHTML = "Você clicou uma vez no botão.";
+            } else {
+                document.getElementById("resultado3").innerHTML = "Você clicou "+ sessionStorage.contador3 +" vezes no botão.";
+            }
+
+        } else {
+            document.getElementById("resultado3").innerHTML = "Seu navegador não suporta WEB Storage!";
+        }
+    }
+
 </script>
 
 </body>
